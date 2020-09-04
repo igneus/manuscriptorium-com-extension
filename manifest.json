@@ -1,0 +1,18 @@
+{
+
+  "manifest_version": 2,
+  "name": "manuscriptorium.com - Extension",
+  "version": "1.0",
+
+  "description": "Allows navigating http://www.manuscriptorium.com using arrow keys instead of navigation links",
+
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.manuscriptorium.com/*"
+      ],
+      "js": ["extension.js"]
+    }
+  ]
+
+}
