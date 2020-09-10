@@ -34,5 +34,10 @@ document.addEventListener('keydown', (event) => {
     close();
   } else if (keyName === 'f' || keyName === 'ArrowUp') {
     maximize();
+  } else if (keyName === '+') {
+    findLinkByTitle('Zoom in').click();
+  } else if (keyName === '-') {
+    findLinkByTitle('Zoom out').click();
   }
+  // else { console.log(keyName); }
 }, false);
