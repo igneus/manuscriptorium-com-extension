@@ -1,11 +1,15 @@
-# Browser Extension for the Sources at "Centrum Medievistických Studií"
+# Browser Extension for manuscriptorium.com
 
-Firefox extension enhancing https://sources.cms.flu.cas.cz/src/
-with keyboard navigation.
+Firefox extension enhancing the [Manuscriptorium.com digital library](http://www.manuscriptorium.com/apps/index.php)
+with keyboard controls.
 (Works only on the book page view.)
 
 * `left arrow key` - go to the previous page
 * `right arrow key` - go to the next page
+* `up arrow key` or `f` - maximize facsimile view window
+* `escape` - close facsimile view window
+* `+` - zoom in
+* `-` - zoom out
 
 For now this extension has only been published as source on Github.
 Created mainly for myself as a productivity hack.
