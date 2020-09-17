@@ -1,9 +1,13 @@
 'use strict';
 
-var findLinkByTitle = function (title) {
+var findElementByTitle = function (title, element) {
   return document
-    .evaluate("//a[@title = '"+title+"']", document, null, XPathResult.ANY_TYPE, null)
+    .evaluate("//"+element+"[@title = '"+title+"']", document, null, XPathResult.ANY_TYPE, null)
     .iterateNext();
+};
+
+var findLinkByTitle = function (title) {
+  return findElementByTitle(title, 'a');
 };
 
 // TODO: this probably works only with locale EN.
@@ -35,9 +39,9 @@ document.addEventListener('keydown', (event) => {
   } else if (keyName === 'f' || keyName === 'ArrowUp') {
     maximize();
   } else if (keyName === '+') {
-    findLinkByTitle('Zoom in').click();
+    findElementByTitle('Zoom in', 'button').click();
   } else if (keyName === '-') {
-    findLinkByTitle('Zoom out').click();
+    findElementByTitle('Zoom out', 'button').click();
   }
   // else { console.log(keyName); }
 }, false);
