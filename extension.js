@@ -1,29 +1,29 @@
 'use strict';
 
-var findElementByTitle = function (title, element) {
+const findElementByTitle = function (title, element) {
   return document
     .evaluate("//"+element+"[@title = '"+title+"']", document, null, XPathResult.ANY_TYPE, null)
     .iterateNext();
 };
 
-var findLinkByTitle = function (title) {
+const findLinkByTitle = function (title) {
   return findElementByTitle(title, 'a');
 };
 
 // TODO: this probably works only with locale EN.
-var previous = function () {
+const previous = function () {
     findLinkByTitle('Browse to previous page/image.').click();
 };
 
-var next = function () {
+const next = function () {
     findLinkByTitle('Browse to next page/image.').click();
 };
 
-var close = function () {
+const close = function () {
     findLinkByTitle('Close floating window.').click();
 };
 
-var maximize = function () {
+const maximize = function () {
     findLinkByTitle('Maximize floating window.').click();
 };
 
